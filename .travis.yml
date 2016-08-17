@@ -14,3 +14,5 @@ before_script:
   - bundle exec rails db:create
   - bundle exec rails db:migrate
 install: bundle install
+notifications:
+  email: false
