@@ -5,6 +5,7 @@ AllCops:
     - 'vendor/**/*'
     - 'db/schema.rb'
     - 'config/**/*'
+    - 'spec/spec_helper.rb'
 
 Style/AlignHash:
   EnforcedColonStyle: table

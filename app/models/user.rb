@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  def self.from_omniauth(auth)
+  def self.from_omniauth(auth) # rubocop:disable Metrics/AbcSize
     where(uid: auth.uid, provider: auth.provider).first_or_initialize.tap do |user|
       user.provider = auth.provider
       user.uid = auth.uid
@@ -10,7 +10,7 @@ class User < ApplicationRecord
       user.last_name = auth.info.last_name
       user.link = auth.extra.raw_info.link
       user.oauth_token = auth.credentials.token
-      user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+      user.oauth_expires_at = Time.at(auth.credentials.expires_at) # rubocop:disable Rails/TimeZone
       user.save!
     end
   end
