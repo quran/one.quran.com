@@ -1,0 +1,44 @@
+AllCops:
+  RunRailsCops: true
+  Exclude:
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'db/schema.rb'
+    - 'config/**/*'
+
+Style/AlignHash:
+  EnforcedColonStyle: table
+
+Style/AccessModifierIndentation:
+  EnforcedStyle: outdent
+
+Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 160
+
+Style/NegatedIf:
+  Enabled: false
+
+Style/SingleSpaceBeforeFirstArg:
+  Enabled: false
+
+Style/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Style/LambdaCall:
+  EnforcedStyle: braces
+
+# Stick to ABC size to catch complex methods, not line count
+Metrics/MethodLength:
+  Enabled: false
+
+Style/ExtraSpacing:
+  Enabled: false
+
+Style/RegexpLiteral:
+  EnforcedStyle: percent_r
+
+Style/WordArray:
+  Enabled: false
