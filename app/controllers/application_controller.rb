@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
-  def current_user
+  def current_user # rubocop:disable Style/TrivialAccessors
     @current_user
   end
 
@@ -17,7 +17,7 @@ protected
     @current_user ||= User.find(decoded_token['id'])
 
   rescue JWT::DecodeError
-    render json: {error: 'unauthorized'}, status: :unauthorized
+    render json: { error: 'unauthorized' }, status: :unauthorized
   end
 
   def authentication_token
