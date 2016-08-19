@@ -6,6 +6,7 @@ AllCops:
     - 'db/schema.rb'
     - 'config/**/*'
     - 'spec/spec_helper.rb'
+    - 'Guardfile'
 
 Style/AlignHash:
   EnforcedColonStyle: table
