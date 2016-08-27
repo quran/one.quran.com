@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # dotenv for env variables
 gem 'dotenv-rails'
 
-gem 'omniauth'
+# Facebook
 gem 'omniauth-facebook'
 
 group :development, :test do
