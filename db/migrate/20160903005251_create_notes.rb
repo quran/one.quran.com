@@ -3,6 +3,7 @@ class CreateNotes < ActiveRecord::Migration[5.0]
     create_table :notes do |t|
       t.belongs_to :user, foreign_key: true
       t.string :ayah_key
+      t.text :text
 
       t.timestamps
     end

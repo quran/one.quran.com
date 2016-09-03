@@ -1,7 +1,9 @@
 FactoryGirl.define do
   factory :note do
-    user nil
-ayah_key "MyString"
+    ayah_key '1:1'
+    text 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.'
+
+    association :user, factory: :user
   end
 
 end
