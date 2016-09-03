@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160817052217) do
+ActiveRecord::Schema.define(version: 20160902020032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookmarks", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "ayah_key"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ayah_key"], name: "index_bookmarks_on_ayah_key", using: :btree
+    t.index ["user_id"], name: "index_bookmarks_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "provider",         null: false
@@ -33,4 +42,5 @@ ActiveRecord::Schema.define(version: 20160817052217) do
     t.index ["uid"], name: "index_users_on_uid", using: :btree
   end
 
+  add_foreign_key "bookmarks", "users"
 end
