@@ -1,7 +1,7 @@
 class User < ApplicationRecord
+  has_many :bookmarks
+  
   def self.from_omniauth(auth) # rubocop:disable Metrics/AbcSize
-    has_many :bookmarks
-
     where(uid: auth.uid, provider: auth.provider).first_or_initialize.tap do |user|
       user.provider = auth.provider
       user.uid = auth.uid
