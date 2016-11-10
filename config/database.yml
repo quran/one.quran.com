@@ -81,5 +81,7 @@ test:
 production:
   <<: *default
   database: one_quran_production
-  username: one_quran
-  password: <%= ENV['ONE_QURAN_DATABASE_PASSWORD'] %>
+  username: postgres
+  password: <%= ENV['POSTGRES_ENV_POSTGRES_PASSWORD'] %>
+  host: <%= ENV['POSTGRES_PORT_5432_TCP_ADDR'] %>
+  port: <%= ENV['POSTGRES_PORT_5432_TCP_PORT'] %>
