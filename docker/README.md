@@ -1,5 +1,7 @@
 # Docker Configuration for OneQuran
 
+These are some instructions for building the OneQuran Docker images.
+
 ## Build Instructions
 
 1. build the image `docker build -t quran/one.quran.com .`
@@ -9,7 +11,7 @@
 
 ## Sample `docker-compose.yml`:
 
-```
+```yaml
 service:
   image: quran/one.quran.com
   ports:
