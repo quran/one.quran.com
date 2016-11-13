@@ -29,8 +29,8 @@ module Api
           'nbf' => now - 60,     # available for use 1 minute before now
           'iat' => now,          # time issued
           'jti' => SecureRandom.uuid,
-          'sub' => user['email']
-        }.merge(user)
+          'id'  => user.id
+        }
       end
 
       def token_expiration
