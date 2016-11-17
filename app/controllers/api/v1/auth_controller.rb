@@ -29,7 +29,7 @@ module Api
           'nbf' => now - 60,     # available for use 1 minute before now
           'iat' => now,          # time issued
           'jti' => SecureRandom.uuid,
-          'id'  => user.id
+          'id'  => user['id']
         }
       end
 
