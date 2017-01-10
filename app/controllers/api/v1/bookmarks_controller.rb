@@ -1,4 +1,5 @@
 class Api::V1::BookmarksController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_bookmark, only: [:show, :edit, :update, :destroy]
 
   # GET /bookmarks
