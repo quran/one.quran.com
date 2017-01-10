@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include DeviseTokenAuth::Concerns::SetUserByToken
 
   before_action :authenticate
   before_action :set_default_response_format
