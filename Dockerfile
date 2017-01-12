@@ -40,6 +40,7 @@ RUN chown -R app log
 RUN chown -R app public
 RUN chown app Gemfile
 RUN chown app Gemfile.lock
+RUN mkdir -p /var/log/nginx/one.quran.com
 
 # cleanup apt
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
